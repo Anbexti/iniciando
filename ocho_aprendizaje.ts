@@ -58,5 +58,28 @@ console.log("que",onda,"estoy",persona,loan,kilos,"horas")
 
 // modulo 01-
 
+//operadores aritmeticos
 
-console.log(`suma:10 + 3 =${10 + 3})
+let a: number = 4
+let b: number = 9
+
+console.log("suma:", a + b)
+console.log("resta:", a - b)
+console.log("multiplicacion:",a * b)
+console.log("division:",a / b)
+console.log("modulo:",a % b)
+console.log("potencia:",a ** b)
+
+
+//operadores de comparacion
+
+a = 4 
+b = 9
+
+console.log("igualdad:",a == b)
+console.log("desigualdad:", a != b)
+console.log("igualdad estricta:", a === b)
+console.log("mayor que:", a > b)
+console.log("menor que:",a < b)
+console.log("mayor o igual que:", a >= b)
+console.log("menor o igual que:", a <= b)
