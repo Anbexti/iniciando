@@ -1,6 +1,10 @@
+//Roadmap de mouredev 
+
+//modulo 00- variables; constantes; datos primitivos y parte de sintaxis y console log
+
 //https://www.typescriptlang.org/
 
-// las dos barras es para un coemntario de una linea // no hace falta cerrar
+// las dos barras es para un coemntario de una linea // no hace falta cerrar}
 
 /*con la barra y asterisco puedo hacer
 comentarios multilineal, y para cerrar se hace al revez*/
@@ -15,12 +19,13 @@ alguna variable,instruccion o codigo*/
 
 // let es para variables que van a cambiar su valor
 
-let variable: string
+let variable: string = "perro"
 
 //const para variables que no cambian su valor 
 
 const nombre = "franco" 
 
+//estos son datos primitivos, los de aca abajo
 /*string es texto; number son numeros; boolean son true o false. Estos
 son los fundamentales*/
 
@@ -38,3 +43,20 @@ let vida: boolean = true
 let estomago: undefined
 
 console.log("aprendi bastante, buenas notaciones")
+
+const onda:string = "onda"
+
+const persona: string = "aprendiendo"
+
+let loan: string = "en"
+
+const kilos : number = 8
+
+console.log("que",onda,"estoy",persona,loan,kilos,"horas")
+
+
+
+// modulo 01-
+
+
+console.log(`suma:10 + 3 =${10 + 3})
