@@ -146,7 +146,7 @@ switch (age){
         console.log("Edad no clasificada");
         break;
 }
-
+//tambien esta el while,y do while
 //iterativas
 
 let combustible: number = 5000
