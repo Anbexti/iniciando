@@ -125,4 +125,12 @@ let comida: boolean = true
 
 let combustible: number = 5000
 
-while (combustible) = 2500
+if (combustible >= 2500)
+{console.log("podes viajar tranquilo,tenes",combustible)}
+
+for(let i = 0; i < 11; i++) {console.log(i)}
+
+let energia = 100
+
+while (energia > 0) {console.log(`me queda ${energia}% de energia`);
+energia -= 25}
