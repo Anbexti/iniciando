@@ -157,13 +157,7 @@ finally{console.log("fin de la operacion")}
 let t:number = 10
 
 for (t = 10; t < 56; t += 2)
-
 {console.log(t)}
 
-
-let o:number = 1
-for (o = 1; o < 100;o *= 3){
-   console.log(o)
-}
-if (o % 2 == 0 && o != 16) 
-   {console.log(o)}
+if (t % 2 == 0 && t != 16) 
+   {console.log(t)}
