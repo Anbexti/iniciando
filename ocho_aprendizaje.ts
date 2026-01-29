@@ -70,7 +70,6 @@ console.log("division:",a / b)
 console.log("modulo:",a % b)
 console.log("potencia:",a ** b)
 
-
 //operadores de comparacion
 
 a = 4 
@@ -83,3 +82,47 @@ console.log("mayor que:", a > b)
 console.log("menor que:",a < b)
 console.log("mayor o igual que:", a >= b)
 console.log("menor o igual que:", a <= b)
+
+
+//creo que es importante pero meh
+
+//*) Operadores Lógicos
+// Los operadores lógicos combinan condiciones booleanas para tomar decisiones.
+let e: boolean = true;
+let f: boolean = false;
+console.log("AND lógico:", e && f); // false
+console.log("OR lógico:", e || f); // true
+console.log("NOT lógico:", !e); // false
+
+
+//operadores de asignacion
+
+let g: number = 10
+let h: number = 5
+
+console.log("asignacion simple", (g = h))
+console.log("sumas y asignacion", (g += h))
+console.log("multiplicacion y asignacion", (g *= h))
+console.log("division y asignacion", (g /= h))
+console.log("modulo y asignacion", (g %= h))
+console.log("potencia y asignacion", (g **= h))
+
+
+//estructuras de control
+
+//condicionales
+
+//if,else
+
+let comida: boolean = true
+ if (comida){
+    console.log("hay comida,compro despues")
+ } else {
+    console.log("tengo que ir al tati")
+ }
+
+//iterativas
+
+let combustible: number = 5000
+
+while (combustible) = 2500
