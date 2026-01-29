@@ -120,6 +120,32 @@ let comida: boolean = true
  } else {
     console.log("tengo que ir al tati")
  }
+   
+
+ //internet web
+
+ let age: number = 18;
+console.log("If:");
+if (age >= 18) {
+    console.log("Eres mayor de edad"); // Eres mayor de edad
+} else if (age >= 13) {
+    console.log("Eres adolescente");
+} else {
+    console.log("Eres menor de edad");
+}
+
+console.log("Switch:");
+switch (age){
+    case 18:
+        console.log("Eres mayor de edad"); // Eres mayor de edad
+        break;
+    case 13:
+        console.log("Eres adolescente");
+        break;
+    default:
+        console.log("Edad no clasificada");
+        break;
+}
 
 //iterativas
 
@@ -157,7 +183,21 @@ finally{console.log("fin de la operacion")}
 let t:number = 10
 
 for (t = 10; t < 56; t += 2)
-{console.log(t)}
 
 if (t % 2 == 0 && t != 16) 
    {console.log(t)}
+
+
+console.log("separacion")
+
+//solucion web
+
+for (let i = 10; i <= 55; i++) {
+	if (i !== 55) {
+		if (i !== 16 && i % 3 !== 0 && i % 2 === 0) {
+			console.log(i);
+		}
+	} else {
+		console.log(i);
+	}
+}
