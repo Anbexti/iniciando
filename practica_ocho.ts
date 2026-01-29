@@ -14,5 +14,5 @@ let min = 10
 let max = 1000 
 
 let azar = 
-math.floor(math.random) * (max - min + 1) + min
+    Math.floor(Math.random()) * (max - min + 1) + min
 
