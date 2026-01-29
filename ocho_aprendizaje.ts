@@ -134,3 +134,29 @@ let energia = 100
 
 while (energia > 0) {console.log(`me queda ${energia}% de energia`);
 energia -= 25}
+
+//manejo de exepciones
+
+/* try es para intentar algo `riesgoso`por asi decirlo,y nos da
+la seguridad de poner un mensaje o algo si sale mal y que no
+explote el codigo o algo asi*/
+/* el primer de try,es por si salio bien, si podria llegar a salir mal
+ponemos catch y lo configuramos,por ultimo,si ponemos finally
+por mas que salga bien o mal la ejecucion saldra el mensaje 
+o lo que sea*/
+
+try{
+    const resultado = 10 / 0;
+    console.log("operacion exitosa")
+}
+catch{ console.log("ha habido un eror")}
+finally{console.log("fin de la operacion")}
+
+//extra 
+
+let t:number = 10
+
+for (t = 10; t < 56; t += 2)
+
+{console.log(t)}
+
