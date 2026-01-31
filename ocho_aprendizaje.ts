@@ -36,7 +36,7 @@ Estos son mas avanzados o opcionales creo*/
 
 const gato: string = "chimuelo"
 
-let edad: number = 1
+let años : number = 1
 
 let vida: boolean = true 
 
@@ -48,7 +48,7 @@ const onda:string = "onda"
 
 const persona: string = "aprendiendo"
 
-let loan: string = "en"
+let loan: string = "en"  
 
 const kilos : number = 8
 
@@ -59,6 +59,14 @@ console.log("que",onda,"estoy",persona,loan,kilos,"horas")
 // modulo 01-
 
 //operadores aritmeticos
+
+/*el modulo es el resto de la division, por ejemplo si hago 25 % 24 el modulo da 1 porque
+si divido 25 en 24 lo que sobra es 1*/
+//la potencia no es multiplicacion, solo por aclarar
+/*si se hace por ejemplo  x(numero) % 2 === 0; entonces si el resultado del resto es 0
+que seriia divisble por 2 ,el resultado es par, si se hace x % 2 !== 0 entonces el 
+resultado seria impar*/
+
 
 let a: number = 4
 let b: number = 9
