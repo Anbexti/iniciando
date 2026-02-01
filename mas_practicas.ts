@@ -176,7 +176,6 @@ switch (lista_invitados) {
 //ejercicio con switch
 
 let categoria: number = 4
-let producto: string 
 
 switch (categoria) {
     case 1: console.log(
@@ -191,3 +190,41 @@ switch (categoria) {
     case 4: console.log(
         "es de la categoria limpieza");
     }
+
+//while y do while
+
+/*el while es para cuando, se cumpla una condicion el while lo
+ejecutara, while(condicion) {codigo a ejecutar si se cumple la condicion}.
+El do while es lo mismo, pero se ejecuta al menos una vez y luego verifica
+si se cumple la condicion*/
+
+//en opcion probar con 1,2 o 3,en caso de cambiar el valor tmb cambie "{opcion +=  ""
+
+let stock= 0
+
+while (stock < 10) {stock++; console.log(stock)}
+
+let opcion = 3
+
+do {console.log("seleccione 1,2 o 3");{opcion += 0}
+} while (opcion !== 3)
+
+
+//try,catch y finall
+
+//probar 0, 2 o cualquier numero para dividir con 10
+
+let divi :number = 0
+
+try { 
+    if (divi === 0){
+        throw new Error("no podes dividir por cero")
+    } let result = 10 / divi;
+    console.log("el resultado es " + result);
+}
+catch (error: any) {
+    console.log("error detectado:" + error.message);
+}
+finally {
+    console.log("nada")
+}
