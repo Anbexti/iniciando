@@ -228,3 +228,120 @@ catch (error: any) {
 finally {
     console.log("nada")
 }
+
+//modulo 2-funciones y alcance
+
+//funcion simple
+
+function dev(): void {
+    console.log("practicando las funciones")
+}
+
+dev()
+
+//funcion con un parametro
+function dev_argument(name: string): void {
+    console.log(`mi nombre es `+ name)
+}
+
+dev_argument("Franco")
+
+
+//funcion con varios parametros
+
+function sumaYresta (a: number, b: number, c: number) {
+    if (a + b + c) {console.log("la suma de a+b+c es ", a + b + c)}
+    else if (a + b) {console.log("la suma de a + b es ", a + b)}
+};
+
+sumaYresta (5,10,15)
+sumaYresta (5,10,0) 
+
+//funcion con varios parametros distintos
+
+function check(): [string, number,boolean] {
+    return ["programa funcionando", 10, true]
+}
+
+let see = check();
+console.log(see[0]);
+console.log(see[1]);
+console.log(see[2]);
+
+//funcion con logica y return
+
+function precioFinal(precio: number) {
+    const descuento = precio *
+    0.10;
+    const precioDescuento = precio -
+    descuento;
+    return precioDescuento
+}
+
+console.log(precioFinal(100))
+
+//funcion con argumento predeterminado 
+
+function pollo(a: number = 1, b: number = 1) {
+    return a + b 
+}
+
+console.log(pollo(10, 20))
+
+//funcion flecha 
+
+const pollito = (a: number = 1, b: number = 1, c: number = 10) => {
+    if (c) {console.log("la suma da ", a + b + c)}
+    else if (a + b){console.log("la suma da ", a + b)}
+}
+
+pollito()
+
+//funcion dentro de funcion
+
+const lagarto = () => {
+    function oso() {
+        console.log("Esta funcion es local, y se ejecuta dentro lagarto")}
+    oso()
+}
+
+lagarto()
+
+/*variable local las que son parametros y variables de la funcion
+y la variable global son let o const de cualquier lugar */
+
+/*ejercicio extra-
+* DIFICULTAD EXTRA (opcional):
+  Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
+  - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
+    - Si el número es múltiplo de 3, muestra la cadena de texto del primer parámetro.
+    - Si el número es múltiplo de 5, muestra la cadena de texto del segundo parámetro.
+    - Si el número es múltiplo de 3 y de 5, muestra las dos cadenas de texto concatenadas.
+    - La función retorna el número de veces que se ha impreso el número en lugar de los textos.
+ 
+  Presta especial atención a la sintaxis que debes utilizar en cada uno de los casos.
+  Cada lenguaje sigue una convenciones que debes de respetar para que el código se entienda.
+ */
+
+
+function exercise(text1:string = "multiplo de 3 ", text2: string = "multiplo de 5") {
+    let count: number = 0
+    let numeros: number = 0;
+    for (numeros = 0; numeros < 101; numeros++) {
+    if (numeros % 3 === 0 && numeros % 5 === 0) {
+        console.log(text1 + text2)}
+    else if (numeros % 5 === 0) {
+        console.log(text2)}
+    else if (numeros % 3 === 0) {
+        console.log(text1)}
+    else {console.log(numeros);
+        count++;
+    }
+    }
+    console.log("veces que se imprimio el numero " + count)
+}
+
+exercise()
+
+/*wow, i made it(with a bit of help about count(that i didnt know about that)and about  
+the sintax of the fizzbuzz, if a have to have a mark, i would say it is a 7 or 6.5)*/

@@ -209,3 +209,86 @@ for (let i = 10; i <= 55; i++) {
 		console.log(i);
 	}
 }
+
+
+//modulo 2 - funciones y alcance
+
+/* las funciones son como bloques de codigo para algo,un ejemplo seria guardar
+una funcion del math.floor(math.random...)(que genera un numero random), cada vez que 
+llame a la funcion, me dara un numero distinto, a que si lo ahgo con el let*/
+//solo se ejecuta al llamarla, no al hacer la funcion
+
+//funcion simple
+
+function greet() {
+    console.log("Hola TypeScript")
+}
+
+greet()
+greet()
+
+
+//con return y argumento
+
+/*IMPORTANTE(maso) para ver el resultado rapido de las funciones usamos 
+solo el console.log y la funcion, pero para usarlo de verdad es mejor
+guardar la funcion en una variable, como const variable = funcion()*/
+
+function trash(numero: number): number {
+    return numero * 2
+}
+
+console.log(trash(7))
+
+//varios argumentos 
+
+function args_greet(greet: string, name: string) {
+    console.log(greet,name)
+}
+
+args_greet("hi","sarah")
+
+
+//con un argumento predeterminado
+
+function default_arg_greet(name: string = "pablo"){
+    console.log(`hola ${name}`)
+}
+
+default_arg_greet("jake")
+default_arg_greet()
+
+
+//con argumentos y retorno
+
+function return_args_greet(greet: string, name: string) {
+    return (`${greet}, ${name}`)
+}
+
+console.log(return_args_greet("hi","brais"))
+
+//con retorno de varios valores
+
+function multiple_returm_greet(): [string, number] {
+    return ["hola", 10];
+}
+
+const result = multiple_returm_greet();
+console.log(result[0]);
+console.log(result[1]);
+
+//variable global - es una varriable normal pero tambien se le dice global
+
+let espada: string = "escalibur"
+
+console.log(espada)
+
+//variable local- son los parametros y varibales que estan en la funcion
+
+function noIdea (a: number,b: number) {
+    const basura = a + b + 2 * 1;
+    const basura_peor = basura * 2
+    return  basura_peor 
+}
+
+console.log(noIdea(5,5)) //24
