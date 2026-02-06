@@ -364,3 +364,153 @@ console.log(my_set)
 let my_tupla: [string, number,number] = ["coords", 24.5, 57.6]
 
 console.log(my_tupla)
+
+//round 2 
+/*Ronda 2: Lógica Aplicada (Nivel Intermedio)
+Ahora vamos a darles una utilidad real a estas estructuras.
+
+Array (Búsqueda): Tenés una lista de precios [100, 500, 250, 800, 150]. 
+Usá un bucle for para encontrar cuál es el precio más caro y mostralo en consola.
+
+Object (Métodos): Agregale una función (método) adentro a tu objeto persona. 
+Que se llame saludar y que al ejecutarla devuelva: "Hola, soy [nombre] y soy [profesion]".
+
+Map (Diccionario): Creá un Map de "Traductor". Clave: palabra en inglés, 
+Valor: palabra en español. Agregá 3 palabras. Después, 
+hacé un console.log que use el método .get() para traducir una de ellas.
+
+Set (Limpieza): Tenés este array con usuarios repetidos: ["Franco", "Mati", "Franco", "Leo", "Mati"].
+Usá un Set para eliminar los duplicados y que te quede una 
+lista limpia (Pista: podés pasarle el array directamente al new Set(array)).
+
+Tupla (Estado): Creá una tupla que represente el 
+estado de una descarga: [string, number]. El string es el nombre del archivo y el 
+número es el porcentaje (0 a 100). 
+Imprimí un mensaje que diga: "Descargando [archivo]... [porcentaje]%".*/
+
+//1)
+
+let my__array = [100,500,250,800,150]
+let maxo: number = 0
+for (let i = 0; i < my__array.length; i++) {
+    if (my__array[i] > maxo) {
+     maxo = my__array[i]
+    }
+}
+console.log("el maximo es", maxo )           //mal hecho
+
+
+
+//2)
+
+interface promedi {
+    nombre: string
+    profesion: string
+    metodo: () => string
+}
+
+let persona: promedi = {
+    nombre: "marco",
+    profesion: "streamer",
+    metodo: function saludar () {
+        return `Hola,soy ${this.nombre} y soy ${this.profesion}`    //el this. busca la variable qu esta ACA adentro
+    }
+}
+
+console.log(persona.metodo())
+
+
+//3)
+let my__map = new Map()
+my__map.set("apple", "manzana");
+my__map.set("love", "amor");
+my__map.set("car", "auto");
+
+console.log(my__map.get("apple"))
+
+//4)
+
+let limpio = ["franco", "mati","franco", "leo", "mati"]
+
+let set = new Set(limpio)
+
+console.log(set)
+
+//5)
+
+let my__tupla: [string, number] = ["exe", 20]
+
+console.log(`descargando ${my__tupla[0]}... ${my__tupla[1]}%`)
+
+/*Crea un Array de Objetos llamado carrito.
+
+Cada objeto debe representar un producto: { nombre: string, precio: number }.
+
+Carga 3 productos (ej: "Mouse" a 20, "Teclado" a 50, "Monitor" a 200).
+
+Usá un for para recorrer el carrito y sumar todos los precios en una variable total.
+
+Imprimí el ticket final: "Total a pagar: $[total]".*/
+
+//final)
+
+let carrito = [
+    { nombre: "mouse", precio: 20},
+    { nombre: "teclado", precio: 50},
+    { nombre: "monitor", precio: 200}
+]
+/* primero hacemos lo de aca arriba que es un array de objectos,
+hacemos una variable donde iran los resultados de la suma de estos productos,
+en el for hacemos i, que nos sirve para condicionar las veces que el bucle se repita,
+al hacer (i < carrito.length) condicioanmos que meintras i sea menor a la longitud de 
+carrito(3 objetos) se hara la funcion, y al terminar se suma 1, asi al llegar a 3 para,
+en el codigo se suma a totalsito los precios de carrito con (carrito[i].precio) donde i
+seria 0, entonces accedemos al precio de la varioble en posicion 0, al terminar la funcion
+y sumarse 1, la siguiente vuelta accedera a la variable en posicion 1 porque i valdra 1, 
+y asi va sumando los precios de carrito al totalsito, alfinal solo se hace un console.log de 
+los resultados*/
+
+let totalsito = 0;
+
+for(let i = 0; i < carrito.length; i++) {
+    totalsito += carrito[i].precio
+    console.log(totalsito)
+}
+
+console.log("separacion")
+
+
+//round 3
+
+/*Ronda 3: El Desafío Final (Misión Combinada)
+Ya sabés recorrer, ya sabés sumar y ya sabés acceder a objetos.
+ Ahora vamos a mezclar todo con un poco de lógica de negocio.
+
+El Escenario: Tenés un carrito con productos, pero algunos tienen envío gratis y otros no. 
+Querés saber cuánto tenés que pagar solo de los productos que tienen envío gratis.
+
+Creá un array de objetos llamado productos.
+
+Cada objeto debe tener: nombre, precio y envioGratis (que sea un boolean: true o false).
+
+Cargá al menos 4 productos (mezclá algunos con true y otros con false).
+
+Usá un for para sumar al total solo si envioGratis es true.*/
+
+
+let products =[
+    {nombre: "smart tv", precio: 1000, envioGratis: true},
+    {nombre: "burbujero", precio: 50, envioGratis: false},
+    {nombre: "teclado", precio: 100, envioGratis: false},
+    {nombre: "impresora", precio: 850, envioGratis: true}
+]
+
+let final: number = 0
+
+for (let i = 0; i < products.length; i++) {
+    if (products[i].envioGratis === true) {              //
+        final += products[i].precio
+    }
+}
+
+console.log(final)
