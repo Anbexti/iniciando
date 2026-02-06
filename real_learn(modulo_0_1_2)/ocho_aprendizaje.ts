@@ -162,7 +162,7 @@ let combustible: number = 5000
 if (combustible >= 2500)
 {console.log("podes viajar tranquilo,tenes",combustible)}
 
-for(let i = 0; i < 11; i++) {console.log(i)}
+for(let i = 0; i < 11; i++) {console.log(i)}//for (inicialización; condición; incremento/decremento)
 
 let energia = 100
 
@@ -217,6 +217,8 @@ for (let i = 10; i <= 55; i++) {
 una funcion del math.floor(math.random...)(que genera un numero random), cada vez que 
 llame a la funcion, me dara un numero distinto, a que si lo ahgo con el let*/
 //solo se ejecuta al llamarla, no al hacer la funcion
+/*al hacer console log en la funcion solo sirve para mi, luego eso muere, 
+es mejor guardar la funcion y poner return y el texto o dato final para que sea mas funcional*/
 
 //funcion simple
 
